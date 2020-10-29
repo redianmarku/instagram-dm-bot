@@ -294,7 +294,7 @@ class InstaDM(object):
             actions.click(element).perform()
             for s in input_text:
                 element.send_keys(s)
-                sleep(uniform(0.25, 0.75))
+                sleep(uniform(0.15, 0.55))
 
         except Exception as e:
             logging.error(e)
