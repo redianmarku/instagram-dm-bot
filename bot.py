@@ -7,7 +7,7 @@ with open(r'users.txt', 'r') as f:
 print(users)
 
 # Auto login
-insta = InstaDM(username='usernaem', password='password', headless=False)
+insta = InstaDM(username='username', password='password', headless=False)
 
 for user in users:
     # Send message
