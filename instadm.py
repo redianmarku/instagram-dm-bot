@@ -40,7 +40,7 @@ class InstaDM(object):
             options.add_argument("--headless")
 
         mobile_emulation = {
-            "userAgent": 'Mozilla/5.0 (Linux; Android 4.0.3; HTC One X Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19'
+            "userAgent": 'Mozilla/5.0 (Linux; Android 4.0.3; HTC One X Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/83.0.1025.133 Mobile Safari/535.19'
         }
         options.add_experimental_option("mobileEmulation", mobile_emulation)
 
