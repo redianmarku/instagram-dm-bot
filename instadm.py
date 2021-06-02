@@ -43,9 +43,10 @@ class InstaDM(object):
             "userAgent": 'Mozilla/5.0 (Linux; Android 4.0.3; HTC One X Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/83.0.1025.133 Mobile Safari/535.19'
         }
         options.add_experimental_option("mobileEmulation", mobile_emulation)
+        options.add_argument("--log-level=3")
 
         self.driver = webdriver.Chrome(
-            executable_path='chromedriver.exe', options=options)
+            executable_path=CM().install(), options=options)
         self.driver.set_window_position(0, 0)
         self.driver.set_window_size(414, 736)
 
@@ -294,7 +295,7 @@ class InstaDM(object):
             actions.click(element).perform()
             for s in input_text:
                 element.send_keys(s)
-                sleep(uniform(0.15, 0.55))
+                sleep(uniform(0.002, 0.02))
 
         except Exception as e:
             logging.error(e)
